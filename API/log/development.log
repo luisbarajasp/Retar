@@ -1,0 +1,236 @@
+Started GET "/v1/games" for 127.0.0.1 at 2018-01-04 19:16:37 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/v1/games"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-04 19:32:26 -0600
+Processing by V1::SportsController#index as HTML
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.010522s
+Completed 200 OK in 63ms (Views: 39.9ms)
+
+
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-04 19:43:56 -0600
+Processing by V1::SportsController#index as HTML
+Completed 500 Internal Server Error in 20ms
+
+
+  
+NoMethodError (undefined method `Test' for SportRadar:Module):
+  
+app/controllers/v1/sports_controller.rb:5:in `index'
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-04 19:52:26 -0600
+Processing by V1::SportsController#index as HTML
+Completed 500 Internal Server Error in 14ms
+
+
+  
+NoMethodError (undefined method `Test' for SportRadar:Module):
+  
+app/controllers/v1/sports_controller.rb:5:in `index'
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-04 19:53:57 -0600
+Processing by V1::SportsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `Test' for SportRadar:Module):
+  
+app/controllers/v1/sports_controller.rb:5:in `index'
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-04 19:54:04 -0600
+Processing by V1::SportsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `Test' for SportRadar:Module):
+  
+app/controllers/v1/sports_controller.rb:5:in `index'
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-04 19:54:10 -0600
+Processing by V1::SportsController#index as HTML
+Completed 500 Internal Server Error in 25ms
+
+
+  
+NoMethodError (undefined method `Test' for SportRadar:Module):
+  
+app/controllers/v1/sports_controller.rb:5:in `index'
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-04 19:55:23 -0600
+Processing by V1::SportsController#index as HTML
+Completed 500 Internal Server Error in 27ms
+
+
+  
+NoMethodError (private method `test' called for SportRadar:Module):
+  
+app/controllers/v1/sports_controller.rb:5:in `index'
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-04 19:55:36 -0600
+Processing by V1::SportsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (private method `test' called for SportRadar:Module):
+  
+app/controllers/v1/sports_controller.rb:5:in `index'
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-04 19:56:55 -0600
+Processing by V1::SportsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (private method `test' called for SportRadar:Module):
+  
+app/controllers/v1/sports_controller.rb:5:in `index'
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-04 19:57:09 -0600
+Processing by V1::SportsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (private method `test' called for SportRadar:Module):
+  
+app/controllers/v1/sports_controller.rb:5:in `index'
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-04 19:58:14 -0600
+Processing by V1::SportsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (private method `test' called for SportRadar:Module):
+  
+app/controllers/v1/sports_controller.rb:5:in `index'
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-04 19:58:34 -0600
+Processing by V1::SportsController#index as HTML
+Completed 500 Internal Server Error in 39ms
+
+
+  
+NoMethodError (private method `test' called for SportRadar:Class):
+  
+app/controllers/v1/sports_controller.rb:5:in `index'
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-04 19:58:50 -0600
+Processing by V1::SportsController#index as HTML
+Completed 500 Internal Server Error in 43ms
+
+
+  
+NoMethodError (private method `test' called for SportRadar:Module):
+  
+app/controllers/v1/sports_controller.rb:5:in `index'
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-04 20:20:35 -0600
+Processing by V1::SportsController#index as HTML
+Completed 500 Internal Server Error in 19ms
+
+
+  
+NoMethodError (private method `test' called for SportRadar::Test:Class):
+  
+app/controllers/v1/sports_controller.rb:5:in `index'
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-04 20:23:48 -0600
+Processing by V1::SportsController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+
+  
+NoMethodError (private method `test' called for SportRadar::Test:Class):
+  
+app/controllers/v1/sports_controller.rb:5:in `index'
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-04 20:25:34 -0600
+Processing by V1::SportsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (private method `test' called for SportRadar::Test:Class):
+  
+app/controllers/v1/sports_controller.rb:5:in `index'
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-04 20:25:44 -0600
+Processing by V1::SportsController#index as HTML
+Completed 500 Internal Server Error in 22ms
+
+
+  
+NoMethodError (private method `test' called for SportRadar::Test:Class):
+  
+app/controllers/v1/sports_controller.rb:5:in `index'
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-04 20:26:13 -0600
+Processing by V1::SportsController#index as HTML
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.003137s
+Completed 200 OK in 48ms (Views: 36.5ms)
+
+
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-04 20:26:25 -0600
+Processing by V1::SportsController#index as HTML
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00078s
+Completed 200 OK in 4ms (Views: 3.4ms)
+
+
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-05 11:13:23 -0600
+Processing by V1::SportsController#index as HTML
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.003266s
+Completed 200 OK in 51ms (Views: 31.4ms)
+
+
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-05 12:47:24 -0600
+  
+LoadError (cannot load such file -- sportradar.rb):
+  
+app/controllers/v1/sports_controller.rb:1:in `<top (required)>'
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-05 12:48:14 -0600
+Processing by V1::SportsController#index as HTML
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.001039s
+Completed 200 OK in 12ms (Views: 2.8ms)
+
+
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-05 12:49:05 -0600
+  
+LoadError (cannot load such file -- sportradar.rb):
+  
+app/controllers/v1/sports_controller.rb:1:in `<top (required)>'
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-05 12:49:25 -0600
+Processing by V1::SportsController#index as HTML
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000618s
+Completed 200 OK in 9ms (Views: 1.8ms)
+
+
