@@ -1,5 +1,7 @@
-Sport.create(name: "football", categories: [
-    Category.new(name: "United States", country_code: "us", leagues:[
-        League.new(name: "National Football League", code: "nfl")
-    ])
-])
+# Seeds for intializing DB with basic information
+
+# Since the data is in multiple files, load all of them
+Dir[File.join(Rails.root, 'db', 'seeds', '*.rb')].sort.each do |seed|
+    load seed
+end
+

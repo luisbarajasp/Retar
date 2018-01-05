@@ -27118,3 +27118,517 @@ Completed 200 OK in 51ms (Views: 10.1ms)
 
 MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
 MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000933s
+Started GET "/v1/football/us/nfl" for 127.0.0.1 at 2018-01-05 16:01:04 -0600
+Processing by V1::LeaguesController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "id"=>"nfl"}
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000757s
+Completed 200 OK in 4ms (Views: 0.4ms)
+
+
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-05 16:01:08 -0600
+Processing by V1::SportsController#index as HTML
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.001127s
+Completed 200 OK in 6ms (Views: 5.0ms)
+
+
+Overwriting existing field _id in class Sport.
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.003934s
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+MONGODB | localhost:27017 | api_development.delete | STARTED | {"delete"=>"sports", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.delete | SUCCEEDED | 0.000949s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.006069s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000692s
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-05 16:20:54 -0600
+Processing by V1::SportsController#index as HTML
+Overwriting existing field _id in class Sport.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000623s
+Completed 200 OK in 11ms (Views: 2.0ms)
+
+
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-05 16:20:56 -0600
+Processing by V1::SportsController#index as HTML
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0008100000000000001s
+Completed 200 OK in 3ms (Views: 2.4ms)
+
+
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000539s
+Overwriting existing field _id in class Sport.
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+Overwriting existing field _id in class Division.
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"sports", "documents"=>[{"name"=>"football", "_id"=>"football", "categories"=>[{"name"=>"United States", "country_code"=>"us", "_id"=>"us", "leagues"=>[{"name"=>"National Football League", "code"=>"nfl", "_id"=>"nfl", "conferences"=>[{"name...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.0011719999999999999s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"e9e0828e-37fc-4238-a317-49037577dd55", "name"=>"New Era Field", "city"=>"Orchard Park", "state"=>"NY", "country"=>"USA", "zip"=>"14127", "address"=>"One Bills Drive", "capacity"=>73079, "surface"=>"artificia...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.065299s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00088s
+Overwriting existing field _id in class Division.
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-05 16:25:32 -0600
+Processing by V1::SportsController#index as HTML
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000983s
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+Overwriting existing field _id in class Division.
+Completed 200 OK in 53ms (Views: 52.9ms)
+
+
+Started GET "/v1/football/us/nfl" for 127.0.0.1 at 2018-01-05 16:26:34 -0600
+Processing by V1::LeaguesController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "id"=>"nfl"}
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000756s
+Completed 200 OK in 6ms (Views: 1.8ms)
+
+
+Started GET "/v1/football/us/nfl" for 127.0.0.1 at 2018-01-05 16:30:38 -0600
+Processing by V1::LeaguesController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "id"=>"nfl"}
+Overwriting existing field _id in class Sport.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000728s
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+Overwriting existing field _id in class Division.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_east"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.009382s
+Completed 200 OK in 81ms (Views: 2.5ms)
+
+
+Started GET "/v1/football/us/nfl" for 127.0.0.1 at 2018-01-05 16:33:02 -0600
+Processing by V1::LeaguesController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "id"=>"nfl"}
+Overwriting existing field _id in class Sport.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.001006s
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+Overwriting existing field _id in class Division.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_east"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.002476s
+Completed 200 OK in 89ms (Views: 0.4ms)
+
+
+Started GET "/v1/football/us/nfl" for 127.0.0.1 at 2018-01-05 16:33:39 -0600
+Processing by V1::LeaguesController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "id"=>"nfl"}
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0007980000000000001s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_east"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0006090000000000001s
+Completed 200 OK in 7ms (Views: 0.1ms)
+
+
+MONGODB | localhost:27017 | api_development.delete | STARTED | {"delete"=>"sports", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.delete | SUCCEEDED | 0.000723s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000863s
+Overwriting existing field _id in class Sport.
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+Overwriting existing field _id in class Division.
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"sports", "documents"=>[{"name"=>"football", "_id"=>"football", "categories"=>[{"name"=>"United States", "country_code"=>"us", "_id"=>"us", "leagues"=>[{"name"=>"National Football League", "code"=>"nfl", "_id"=>"nfl", "conferences"=>[{"name...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.001954s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"e9e0828e-37fc-4238-a317-49037577dd55", "name"=>"New Era Field", "city"=>"Orchard Park", "state"=>"NY", "country"=>"USA", "zip"=>"14127", "address"=>"One Bills Drive", "capacity"=>73079, "surface"=>"artificia...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.028297s
+MONGODB | localhost:27017 | api_development.delete | STARTED | {"delete"=>"venues", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.delete | SUCCEEDED | 0.002235s
+Overwriting existing field _id in class Sport.
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+Overwriting existing field _id in class Division.
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"sports", "documents"=>[{"name"=>"football", "_id"=>"football", "categories"=>[{"name"=>"United States", "country_code"=>"us", "_id"=>"us", "leagues"=>[{"name"=>"National Football League", "code"=>"nfl", "_id"=>"nfl", "conferences"=>[{"name...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.001147s
+MONGODB | localhost:27017 | api_development.delete | STARTED | {"delete"=>"sports", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.delete | SUCCEEDED | 0.000794s
+MONGODB | localhost:27017 | api_development.delete | STARTED | {"delete"=>"venues", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.delete | SUCCEEDED | 0.0007390000000000001s
+Overwriting existing field _id in class Sport.
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+Overwriting existing field _id in class Division.
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"sports", "documents"=>[{"name"=>"football", "_id"=>"football", "categories"=>[{"name"=>"United States", "country_code"=>"us", "_id"=>"us", "leagues"=>[{"name"=>"National Football League", "code"=>"nfl", "_id"=>"nfl", "conferences"=>[{"name...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.005423s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"e9e0828e-37fc-4238-a317-49037577dd55", "name"=>"New Era Field", "city"=>"Orchard Park", "state"=>"NY", "country"=>"USA", "zip"=>"14127", "address"=>"One Bills Drive", "capacity"=>73079, "surface"=>"artificia...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000453s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0008479999999999999s
+MONGODB | localhost:27017 | api_development.delete | STARTED | {"delete"=>"venues", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.delete | SUCCEEDED | 0.0006529999999999999s
+MONGODB | localhost:27017 | api_development.delete | STARTED | {"delete"=>"sports", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.delete | SUCCEEDED | 0.000924s
+Overwriting existing field _id in class Sport.
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+Overwriting existing field _id in class Division.
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"sports", "documents"=>[{"name"=>"football", "_id"=>"football", "categories"=>[{"name"=>"United States", "country_code"=>"us", "_id"=>"us", "leagues"=>[{"name"=>"National Football League", "code"=>"nfl", "_id"=>"nfl", "conferences"=>[{"name...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.001207s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"_id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000395s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0008979999999999999s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0008280000000000001s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.014568s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000816s
+MONGODB | localhost:27017 | api_development.delete | STARTED | {"delete"=>"sports", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.delete | SUCCEEDED | 0.000576s
+MONGODB | localhost:27017 | api_development.delete | STARTED | {"delete"=>"venues", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.delete | SUCCEEDED | 0.0007199999999999999s
+Overwriting existing field _id in class Sport.
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+Overwriting existing field _id in class Division.
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"sports", "documents"=>[{"name"=>"football", "_id"=>"football", "categories"=>[{"name"=>"United States", "country_code"=>"us", "_id"=>"us", "leagues"=>[{"name"=>"National Football League", "code"=>"nfl", "_id"=>"nfl", "conferences"=>[{"name...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.001212s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724", "name"=>"Bills", "market"=>"Buffalo", "code"=>"BUF", "division_id"=>"afc_east"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.06894399999999999s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"e9e0828e-37fc-4238-a317-49037577dd55", "name"=>"New Era Field", "city"=>"Orchard Park", "state"=>"NY", "country"=>"USA", "zip"=>"14127", "address"=>"One Bills Drive", "capacity"=>73079, "surface"=>"artificia...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.00044300000000000003s
+Started GET "/v1/football/us/nfl" for 127.0.0.1 at 2018-01-05 16:40:18 -0600
+  
+SyntaxError (/Users/Luis/Code/Retar/API/app/controllers/v1/leagues_controller.rb:7: syntax error, unexpected ':', expecting ')'
+son: @league.to_json(:include: [:teams, :venues]), status: :
+                              ^
+/Users/Luis/Code/Retar/API/app/controllers/v1/leagues_controller.rb:7: syntax error, unexpected ')', expecting keyword_end
+n(:include: [:teams, :venues]), status: :ok
+                              ^):
+  
+app/controllers/v1/leagues_controller.rb:7: syntax error, unexpected ':', expecting ')'
+app/controllers/v1/leagues_controller.rb:7: syntax error, unexpected ')', expecting keyword_end
+Started GET "/v1/football/us/nfl" for 127.0.0.1 at 2018-01-05 16:40:30 -0600
+Processing by V1::LeaguesController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "id"=>"nfl"}
+Overwriting existing field _id in class Sport.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00165s
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+Overwriting existing field _id in class Division.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_east"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.032616s
+Completed 200 OK in 112ms (Views: 2.3ms)
+
+
+Started GET "/v1/football/us/nfl" for 127.0.0.1 at 2018-01-05 16:40:51 -0600
+Processing by V1::LeaguesController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "id"=>"nfl"}
+Overwriting existing field _id in class Sport.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000824s
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+Overwriting existing field _id in class Division.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_east"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.001748s
+Completed 200 OK in 84ms (Views: 0.2ms)
+
+
+Started GET "/v1/football/us/nfl" for 127.0.0.1 at 2018-01-05 16:40:53 -0600
+Processing by V1::LeaguesController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "id"=>"nfl"}
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0009710000000000001s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_east"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000874s
+Completed 200 OK in 7ms (Views: 0.2ms)
+
+
+Started GET "/v1/football/us/nfl" for 127.0.0.1 at 2018-01-05 16:41:46 -0600
+Processing by V1::LeaguesController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "id"=>"nfl"}
+Overwriting existing field _id in class Sport.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0012540000000000001s
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+Overwriting existing field _id in class Division.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_east"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0025299999999999997s
+Completed 200 OK in 68ms (Views: 0.2ms)
+
+
+Started GET "/v1/football/us/nfl" for 127.0.0.1 at 2018-01-05 16:41:49 -0600
+Processing by V1::LeaguesController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "id"=>"nfl"}
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000931s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_east"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000889s
+Completed 200 OK in 8ms (Views: 0.1ms)
+
+
+Started GET "/v1/football/us/nfl" for 127.0.0.1 at 2018-01-05 16:42:34 -0600
+Processing by V1::LeaguesController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "id"=>"nfl"}
+Overwriting existing field _id in class Sport.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000789s
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+Overwriting existing field _id in class Division.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_east"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0007650000000000001s
+Completed 200 OK in 60ms (Views: 0.3ms)
+
+
+Started GET "/v1/football/us/nfl" for 127.0.0.1 at 2018-01-05 16:42:41 -0600
+Processing by V1::LeaguesController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "id"=>"nfl"}
+Overwriting existing field _id in class Sport.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.001083s
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+Overwriting existing field _id in class Division.
+Completed 200 OK in 58ms (Views: 0.2ms)
+
+
+Started GET "/v1/football/us/nfl" for 127.0.0.1 at 2018-01-05 16:42:45 -0600
+Processing by V1::LeaguesController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "id"=>"nfl"}
+Overwriting existing field _id in class Sport.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00071s
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+Overwriting existing field _id in class Division.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_east"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 42ms (Views: 0.2ms)
+
+
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-05 16:43:26 -0600
+Processing by V1::SportsController#index as HTML
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0008399999999999999s
+Completed 200 OK in 6ms (Views: 5.2ms)
+
+
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-05 16:43:37 -0600
+Processing by V1::SportsController#index as HTML
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000755s
+Completed 200 OK in 6ms (Views: 5.3ms)
+
+
+Started GET "/v1/football/us/nfl" for 127.0.0.1 at 2018-01-05 16:43:42 -0600
+Processing by V1::LeaguesController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "id"=>"nfl"}
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000766s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_east"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.001598s
+Completed 200 OK in 8ms (Views: 0.1ms)
+
+
+Started GET "/v1/football/us/nfl/768c92aa-75ff-4a43-bcc0-f2798c2e1724" for 127.0.0.1 at 2018-01-05 16:46:30 -0600
+Processing by V1::TeamsController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "league_id"=>"nfl", "id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"_id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.002683s
+Completed 200 OK in 12ms (Views: 0.2ms)
+
+
+Started GET "/v1/football/us/nfl/teams/768c92aa-75ff-4a43-bcc0-f2798c2e1724" for 127.0.0.1 at 2018-01-05 16:47:28 -0600
+Processing by V1::TeamsController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "league_id"=>"nfl", "id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"_id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000849s
+Completed 200 OK in 10ms (Views: 0.2ms)
+
+
+Started GET "/v1/football/us/nfl/teams/768c92aa-75ff-4a43-bcc0-f2798c2e1724" for 127.0.0.1 at 2018-01-05 16:47:53 -0600
+Processing by V1::TeamsController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "league_id"=>"nfl", "id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"_id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0008650000000000001s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.007508s
+Completed 200 OK in 37ms (Views: 0.5ms)
+
+
+Started GET "/v1/football/us/nfl/teams/768c92aa-75ff-4a43-bcc0-f2798c2e1724" for 127.0.0.1 at 2018-01-05 16:48:04 -0600
+Processing by V1::TeamsController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "league_id"=>"nfl", "id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"_id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000804s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000939s
+Completed 200 OK in 45ms (Views: 0.2ms)
+
+
+Started GET "/v1/football/us/nfl" for 127.0.0.1 at 2018-01-05 16:48:09 -0600
+Processing by V1::LeaguesController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "id"=>"nfl"}
+Overwriting existing field _id in class Sport.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.005726s
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+Overwriting existing field _id in class Division.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_east"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0035429999999999997s
+Completed 200 OK in 65ms (Views: 0.9ms)
+
+
+Started GET "/v1/football/us/nfl" for 127.0.0.1 at 2018-01-05 16:48:44 -0600
+Processing by V1::LeaguesController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "id"=>"nfl"}
+Overwriting existing field _id in class Sport.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.003908s
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+Overwriting existing field _id in class Division.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_east"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000752s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0030949999999999997s
+Completed 200 OK in 151ms (Views: 0.1ms)
+
+
+Started GET "/v1/football/us/nfl" for 127.0.0.1 at 2018-01-05 16:49:27 -0600
+Processing by V1::LeaguesController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "id"=>"nfl"}
+Overwriting existing field _id in class Sport.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.001151s
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+Overwriting existing field _id in class Division.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_east"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.007391s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.032733000000000005s
+Completed 200 OK in 121ms (Views: 0.5ms)
+
+
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-05 16:49:32 -0600
+Processing by V1::SportsController#index as HTML
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.001928s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_east"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00116s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.001392s
+Completed 200 OK in 15ms (Views: 0.3ms)
+
+
+Started GET "/v1/football" for 127.0.0.1 at 2018-01-05 16:49:43 -0600
+Processing by V1::SportsController#show as HTML
+  Parameters: {"id"=>"football"}
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00077s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_east"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000752s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.002164s
+Completed 200 OK in 13ms (Views: 0.2ms)
+
+
+Started GET "/v1/football/nfl" for 127.0.0.1 at 2018-01-05 16:49:56 -0600
+Processing by V1::CategoriesController#show as HTML
+  Parameters: {"sport_id"=>"football", "id"=>"nfl"}
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.001082s
+Completed 404 Not Found in 19ms
+
+
+  
+Mongoid::Errors::DocumentNotFound (
+message:
+  Document(s) not found for class Category with id(s) nfl.
+summary:
+  When calling Category.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): nfl ... (1 total) and the following ids were not found: nfl.
+resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  
+app/controllers/v1/categories_controller.rb:5:in `show'
+Started GET "/v1/football/us/nfl" for 127.0.0.1 at 2018-01-05 16:50:05 -0600
+Processing by V1::LeaguesController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "id"=>"nfl"}
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{"_id"=>"football"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0010840000000000001s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_east"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000779s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.001253s
+Completed 200 OK in 12ms (Views: 0.2ms)
+
+
+Started GET "/v1/football/us/nfl/teams/768c92aa-75ff-4a43-bcc0-f2798c2e1724" for 127.0.0.1 at 2018-01-05 16:50:11 -0600
+Processing by V1::TeamsController#show as HTML
+  Parameters: {"sport_id"=>"football", "category_id"=>"us", "league_id"=>"nfl", "id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"_id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.001181s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000831s
+Completed 200 OK in 6ms (Views: 0.1ms)
+
+

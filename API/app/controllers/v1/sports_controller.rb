@@ -6,13 +6,13 @@ class V1::SportsController < ApplicationController
         @sports = Sport.all
         # @test = SportRadar::Test.new.test()
 
-        render json: @sports, status: :ok
+        render json: @sports.to_json(:include => { :teams => { :include => :venue }}), status: :ok
     end
 
     def show
         @sport = Sport.find(params[:id])
 
-        render json: @sport, status: :ok
+        render json: @sport.to_json(:include => { :teams => { :include => :venue }}), status: :ok
     end
 
     private
