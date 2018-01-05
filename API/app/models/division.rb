@@ -1,7 +1,8 @@
 class Division
   include Mongoid::Document
-  field :name, type: String
-  field :alias, type: String
+  field :_id, type: String, default: ->{ code }
+  field :name, type: String, default: 'Default'
+  field :code, type: String, default: 'def'
 
   has_many :teams
   embedded_in :conference
