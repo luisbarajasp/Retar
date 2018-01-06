@@ -4,7 +4,7 @@ class V1::CategoriesController < ApplicationController
 
         @category = @sport.categories.find(params[:id])
 
-        render json: @category, status: :ok
+        render json: @category.to_json(:include => { :teams => { :include => :venue }}), status: :ok
     end
 
     private

@@ -1,11 +1,9 @@
-require 'sportradar/sportradar.rb'
 require 'json'
 
 class V1::SportsController < ApplicationController
     def index
         @sports = Sport.all
-        # @test = SportRadar::Test.new.test()
-
+        
         render json: @sports.to_json(:include => { :teams => { :include => :venue }}), status: :ok
     end
 
