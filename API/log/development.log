@@ -28617,3 +28617,320 @@ Overwriting existing field _id in class Category.
 Overwriting existing field _id in class League.
 Overwriting existing field _id in class Conference.
 Overwriting existing field _id in class Division.
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | api_development.dropDatabase | STARTED | {"dropDatabase"=>1}
+MONGODB | localhost:27017 | api_development.dropDatabase | SUCCEEDED | 0.082076s
+Overwriting existing field _id in class Sport.
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"sports", "documents"=>[{"name"=>"football", "_id"=>"football", "categories"=>[{"name"=>"United States", "country_code"=>"us", "_id"=>"us", "leagues"=>[{"name"=>"National Football League", "code"=>"nfl", "_id"=>"nfl"}]}]}], "ordered"=>true}...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.071416s
+Overwriting existing field _id in class Division.
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724", "name"=>"Bills", "market"=>"Buffalo", "code"=>"BUF", "division_id"=>"afc_east"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.050865s
+MONGODB | localhost:27017 | api_development.update | STARTED | {"update"=>"sports", "updates"=>[{"q"=>{"_id"=>"football", "categories._id"=>"us", "categories.0.leagues._id"=>"nfl"}, "u"=>{"$push"=>{"categories.0.leagues.0.conferences"=>{"name"=>"AFC", "code"=>"afc", "_id"=>"afc", "divisions"=>[{"name"=>"AFC East"...
+MONGODB | localhost:27017 | api_development.update | SUCCEEDED | 0.000738s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"e9e0828e-37fc-4238-a317-49037577dd55"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00588s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"e9e0828e-37fc-4238-a317-49037577dd55", "name"=>"New Era Field", "city"=>"Orchard Park", "state"=>"NY", "country"=>"USA", "zip"=>"14127", "address"=>"One Bills Drive", "capacity"=>73079, "surface"=>"artificia...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.051725999999999994s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"4809ecb0-abd3-451d-9c4a-92a90b83ca06", "name"=>"Dolphins", "market"=>"Miami", "code"=>"MIA", "division_id"=>"afc_east"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000529s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"50a5c833-1570-4c38-abc7-7914cf87dbde"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0009360000000000001s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"50a5c833-1570-4c38-abc7-7914cf87dbde", "name"=>"Hard Rock Stadium", "city"=>"Miami Gardens", "state"=>"FL", "country"=>"USA", "zip"=>"33056", "address"=>"2269 Northwest 199th Street", "capacity"=>76100, "sur...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000404s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"5fee86ae-74ab-4bdd-8416-42a9dd9964f3", "name"=>"Jets", "market"=>"New York", "code"=>"NYJ", "division_id"=>"afc_east"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000365s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"5d4c85c7-d84e-4e10-bd6a-8a15ebecca5c"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000408s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"5d4c85c7-d84e-4e10-bd6a-8a15ebecca5c", "name"=>"MetLife Stadium", "city"=>"East Rutherford", "state"=>"NJ", "country"=>"USA", "zip"=>"07073", "address"=>"One MetLife Stadium Drive", "capacity"=>82500, "surfa...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000358s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"97354895-8c77-4fd4-a860-32e62ea7382a", "name"=>"Patriots", "market"=>"New England", "code"=>"NE", "division_id"=>"afc_east"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000363s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"e43310b1-cb82-4df9-8be5-e9b39637031b"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00042s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"e43310b1-cb82-4df9-8be5-e9b39637031b", "name"=>"Gillette Stadium", "city"=>"Foxborough", "state"=>"MA", "country"=>"USA", "zip"=>"02035", "address"=>"One Patriot Place", "capacity"=>68756, "surface"=>"artifi...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000382s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"ad4ae08f-d808-42d5-a1e6-e9bc4e34d123", "name"=>"Bengals", "market"=>"Cincinnati", "code"=>"CIN", "division_id"=>"afc_north"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.00039000000000000005s
+MONGODB | localhost:27017 | api_development.update | STARTED | {"update"=>"sports", "updates"=>[{"q"=>{"_id"=>"football", "categories._id"=>"us", "categories.0.leagues._id"=>"nfl", "categories.0.leagues.0.conferences._id"=>"afc"}, "u"=>{"$push"=>{"categories.0.leagues.0.conferences.0.divisions"=>{"name"=>"AFC Nor...
+MONGODB | localhost:27017 | api_development.update | SUCCEEDED | 0.0006450000000000001s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"b87a1595-d3c8-48ea-8a53-0aab6378a64a"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000389s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"b87a1595-d3c8-48ea-8a53-0aab6378a64a", "name"=>"Paul Brown Stadium", "city"=>"Cincinnati", "state"=>"OH", "country"=>"USA", "zip"=>"45202", "address"=>"One Paul Brown Stadium", "capacity"=>65535, "surface"=>...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.00037s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"d5a2eb42-8065-4174-ab79-0a6fa820e35e", "name"=>"Browns", "market"=>"Cleveland", "code"=>"CLE", "division_id"=>"afc_north"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000372s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"90c38d91-3774-4f5d-82ca-1c806828219f"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000923s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"90c38d91-3774-4f5d-82ca-1c806828219f", "name"=>"FirstEnergy Stadium", "city"=>"Cleveland", "state"=>"OH", "country"=>"USA", "zip"=>"44114", "address"=>"100 Alfred Lerner Way", "capacity"=>71516, "surface"=>"...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000995s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"ebd87119-b331-4469-9ea6-d51fe3ce2f1c", "name"=>"Ravens", "market"=>"Baltimore", "code"=>"BAL", "division_id"=>"afc_north"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.00041s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"d54faae0-0314-484f-8604-9d8dd08e1149"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000414s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"d54faae0-0314-484f-8604-9d8dd08e1149", "name"=>"M&T Bank Stadium", "city"=>"Baltimore", "state"=>"MD", "country"=>"USA", "zip"=>"21230", "address"=>"1101 Russell Street", "capacity"=>71008, "surface"=>"turf"...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000377s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"cb2f9f1f-ac67-424e-9e72-1475cb0ed398", "name"=>"Steelers", "market"=>"Pittsburgh", "code"=>"PIT", "division_id"=>"afc_north"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.00039s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"7349a2e6-0ac9-410b-8bd2-ca58c9f7aa34"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00040699999999999997s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"7349a2e6-0ac9-410b-8bd2-ca58c9f7aa34", "name"=>"Heinz Field", "city"=>"Pittsburgh", "state"=>"PA", "country"=>"USA", "zip"=>"15212", "address"=>"100 Art Rooney Avenue", "capacity"=>65050, "surface"=>"turf", ...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000384s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"82cf9565-6eb9-4f01-bdbd-5aa0d472fcd9", "name"=>"Colts", "market"=>"Indianapolis", "code"=>"IND", "division_id"=>"afc_south"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000417s
+MONGODB | localhost:27017 | api_development.update | STARTED | {"update"=>"sports", "updates"=>[{"q"=>{"_id"=>"football", "categories._id"=>"us", "categories.0.leagues._id"=>"nfl", "categories.0.leagues.0.conferences._id"=>"afc"}, "u"=>{"$push"=>{"categories.0.leagues.0.conferences.0.divisions"=>{"name"=>"AFC Sou...
+MONGODB | localhost:27017 | api_development.update | SUCCEEDED | 0.000567s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"6ed18563-53e0-46c2-a91d-12d73a16456d"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000438s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"6ed18563-53e0-46c2-a91d-12d73a16456d", "name"=>"Lucas Oil Stadium", "city"=>"Indianapolis", "state"=>"IN", "country"=>"USA", "zip"=>"46225", "address"=>"500 South Capitol Avenue", "capacity"=>67000, "surface...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.00036300000000000004s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"f7ddd7fa-0bae-4f90-bc8e-669e4d6cf2de", "name"=>"Jaguars", "market"=>"Jacksonville", "code"=>"JAC", "division_id"=>"afc_south"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000353s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"4c5c036d-dd3d-4183-b595-71a43a97560f"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0007729999999999999s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"4c5c036d-dd3d-4183-b595-71a43a97560f", "name"=>"EverBank Field", "city"=>"Jacksonville", "state"=>"FL", "country"=>"USA", "zip"=>"32202", "address"=>"One EverBank Field Drive", "capacity"=>67246, "surface"=>...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000407s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"82d2d380-3834-4938-835f-aec541e5ece7", "name"=>"Texans", "market"=>"Houston", "code"=>"HOU", "division_id"=>"afc_south"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000381s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"6a72e5ca-33d0-40af-8e6b-b32a4d3d9346"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000372s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"6a72e5ca-33d0-40af-8e6b-b32a4d3d9346", "name"=>"NRG Stadium", "city"=>"Houston", "state"=>"TX", "country"=>"USA", "zip"=>"77054", "address"=>"One Reliant Park", "capacity"=>71054, "surface"=>"artificial", "r...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.00037099999999999996s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"d26a1ca5-722d-4274-8f97-c92e49c96315", "name"=>"Titans", "market"=>"Tennessee", "code"=>"TEN", "division_id"=>"afc_south"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000395s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"5295c1b7-c85c-49cb-9569-1707c65324e5"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000382s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"5295c1b7-c85c-49cb-9569-1707c65324e5", "name"=>"Nissan Stadium", "city"=>"Nashville", "state"=>"TN", "country"=>"USA", "zip"=>"37213", "address"=>"One Titans Way", "capacity"=>69143, "surface"=>"turf", "roof...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.00036s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"ce92bd47-93d5-4fe9-ada4-0fc681e6caa0", "name"=>"Broncos", "market"=>"Denver", "code"=>"DEN", "division_id"=>"afc_west"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000746s
+MONGODB | localhost:27017 | api_development.update | STARTED | {"update"=>"sports", "updates"=>[{"q"=>{"_id"=>"football", "categories._id"=>"us", "categories.0.leagues._id"=>"nfl", "categories.0.leagues.0.conferences._id"=>"afc"}, "u"=>{"$push"=>{"categories.0.leagues.0.conferences.0.divisions"=>{"name"=>"AFC Wes...
+MONGODB | localhost:27017 | api_development.update | SUCCEEDED | 0.0007120000000000001s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"6589e61d-ef1e-4e30-91b5-9acd2072b8a0"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00038300000000000004s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"6589e61d-ef1e-4e30-91b5-9acd2072b8a0", "name"=>"Sports Authority Field at Mile High", "city"=>"Denver", "state"=>"CO", "country"=>"USA", "zip"=>"80204", "address"=>"1701 Mile High Stadium Circle", "capacity"...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000355s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"1f6dcffb-9823-43cd-9ff4-e7a8466749b5", "name"=>"Chargers", "market"=>"Los Angeles", "code"=>"LAC", "division_id"=>"afc_west"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000366s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"feebab00-4a3e-4123-8d7c-ed0dbdd96540"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000409s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"feebab00-4a3e-4123-8d7c-ed0dbdd96540", "name"=>"StubHub Center", "city"=>"Carson", "state"=>"CA", "country"=>"USA", "zip"=>"90746", "address"=>"18400 Avalon Boulevard", "capacity"=>27000, "surface"=>"turf", ...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000362s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"6680d28d-d4d2-49f6-aace-5292d3ec02c2", "name"=>"Chiefs", "market"=>"Kansas City", "code"=>"KC", "division_id"=>"afc_west"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000394s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"2ec4c411-dac2-403d-b091-6b6aa4a0a914"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000395s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"2ec4c411-dac2-403d-b091-6b6aa4a0a914", "name"=>"Arrowhead Stadium", "city"=>"Kansas City", "state"=>"MO", "country"=>"USA", "zip"=>"64129", "address"=>"One Arrowhead Drive", "capacity"=>79451, "surface"=>"tu...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000348s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"1c1cec48-6352-4556-b789-35304c1a6ae1", "name"=>"Raiders", "market"=>"Oakland", "code"=>"OAK", "division_id"=>"afc_west"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000367s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"ba1ad00f-9130-462c-93f9-5612a0015117"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00036700000000000003s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"ba1ad00f-9130-462c-93f9-5612a0015117", "name"=>"Oakland Alameda Coliseum", "city"=>"Oakland", "state"=>"CA", "country"=>"USA", "zip"=>"94621", "address"=>"7000 Coliseum Way", "capacity"=>53200, "surface"=>"t...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000373s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"e627eec7-bbae-4fa4-8e73-8e1d6bc5c060", "name"=>"Cowboys", "market"=>"Dallas", "code"=>"DAL", "division_id"=>"nfc_east"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.0005390000000000001s
+MONGODB | localhost:27017 | api_development.update | STARTED | {"update"=>"sports", "updates"=>[{"q"=>{"_id"=>"football", "categories._id"=>"us", "categories.0.leagues._id"=>"nfl"}, "u"=>{"$push"=>{"categories.0.leagues.0.conferences"=>{"name"=>"NFC", "code"=>"nfc", "_id"=>"nfc", "divisions"=>[{"name"=>"NFC East"...
+MONGODB | localhost:27017 | api_development.update | SUCCEEDED | 0.000553s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"1e84213a-ff1f-4c9d-a003-8ee782b25a40"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000402s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"1e84213a-ff1f-4c9d-a003-8ee782b25a40", "name"=>"AT&T Stadium", "city"=>"Arlington", "state"=>"TX", "country"=>"USA", "zip"=>"76011", "address"=>"One Legends Way", "capacity"=>80000, "surface"=>"artificial", ...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.00036s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"386bdbf9-9eea-4869-bb9a-274b0bc66e80", "name"=>"Eagles", "market"=>"Philadelphia", "code"=>"PHI", "division_id"=>"nfc_east"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000375s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"4fa8c29c-6626-464c-8540-314ed7535e1b"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000478s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"4fa8c29c-6626-464c-8540-314ed7535e1b", "name"=>"Lincoln Financial Field", "city"=>"Philadelphia", "state"=>"PA", "country"=>"USA", "zip"=>"19148", "address"=>"1020 Pattison Avenue", "capacity"=>68532, "surfa...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.00036800000000000005s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"04aa1c9d-66da-489d-b16a-1dee3f2eec4d", "name"=>"Giants", "market"=>"New York", "code"=>"NYG", "division_id"=>"nfc_east"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000362s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"5d4c85c7-d84e-4e10-bd6a-8a15ebecca5c"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000393s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"22052ff7-c065-42ee-bc8f-c4691c50e624", "name"=>"Redskins", "market"=>"Washington", "code"=>"WAS", "division_id"=>"nfc_east"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000481s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"7c11bb2d-4a53-4842-b842-0f1c63ed78e9"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00039600000000000003s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"7c11bb2d-4a53-4842-b842-0f1c63ed78e9", "name"=>"FedExField", "city"=>"Landover", "state"=>"MD", "country"=>"USA", "zip"=>"20785", "address"=>"1600 FedEx Way", "capacity"=>83000, "surface"=>"turf", "roof_type...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.00043700000000000005s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"7b112545-38e6-483c-a55c-96cf6ee49cb8", "name"=>"Bears", "market"=>"Chicago", "code"=>"CHI", "division_id"=>"nfc_north"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000437s
+MONGODB | localhost:27017 | api_development.update | STARTED | {"update"=>"sports", "updates"=>[{"q"=>{"_id"=>"football", "categories._id"=>"us", "categories.0.leagues._id"=>"nfl", "categories.0.leagues.0.conferences._id"=>"nfc"}, "u"=>{"$push"=>{"categories.0.leagues.0.conferences.1.divisions"=>{"name"=>"NFC Nor...
+MONGODB | localhost:27017 | api_development.update | SUCCEEDED | 0.000649s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"d7866605-5ac6-4b3a-90e8-760cc5a26b75"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000457s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"d7866605-5ac6-4b3a-90e8-760cc5a26b75", "name"=>"Soldier Field", "city"=>"Chicago", "state"=>"IL", "country"=>"USA", "zip"=>"60605", "address"=>"1410 South Museum Campus Drive", "capacity"=>61500, "surface"=>...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000438s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"c5a59daa-53a7-4de0-851f-fb12be893e9e", "name"=>"Lions", "market"=>"Detroit", "code"=>"DET", "division_id"=>"nfc_north"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000582s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"6e3bcf22-277d-4c06-b019-62aded51654f"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000443s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"6e3bcf22-277d-4c06-b019-62aded51654f", "name"=>"Ford Field", "city"=>"Detroit", "state"=>"MI", "country"=>"USA", "zip"=>"48226", "address"=>"2000 Brush Street", "capacity"=>65000, "surface"=>"artificial", "r...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000432s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"a20471b4-a8d9-40c7-95ad-90cc30e46932", "name"=>"Packers", "market"=>"Green Bay", "code"=>"GB", "division_id"=>"nfc_north"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.003121s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"5a60dd3a-302c-41c6-ab0f-dd335c1103c2"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000397s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"5a60dd3a-302c-41c6-ab0f-dd335c1103c2", "name"=>"Lambeau Field", "city"=>"Green Bay", "state"=>"WI", "country"=>"USA", "zip"=>"54304", "address"=>"1265 Lombardi Avenue", "capacity"=>80750, "surface"=>"turf", ...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.00043099999999999996s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"33405046-04ee-4058-a950-d606f8c30852", "name"=>"Vikings", "market"=>"Minnesota", "code"=>"MIN", "division_id"=>"nfc_north"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.00037s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"f5ff00d4-1ed8-4918-bf73-13d66d510f98"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0005030000000000001s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"f5ff00d4-1ed8-4918-bf73-13d66d510f98", "name"=>"U.S. Bank Stadium", "city"=>"Minneapolis", "state"=>"MN", "country"=>"USA", "zip"=>"55415", "address"=>"900 S 5th St", "capacity"=>66200, "surface"=>"turf", "r...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000636s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"4254d319-1bc7-4f81-b4ab-b5e6f3402b69", "name"=>"Buccaneers", "market"=>"Tampa Bay", "code"=>"TB", "division_id"=>"nfc_south"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.0005409999999999999s
+MONGODB | localhost:27017 | api_development.update | STARTED | {"update"=>"sports", "updates"=>[{"q"=>{"_id"=>"football", "categories._id"=>"us", "categories.0.leagues._id"=>"nfl", "categories.0.leagues.0.conferences._id"=>"nfc"}, "u"=>{"$push"=>{"categories.0.leagues.0.conferences.1.divisions"=>{"name"=>"NFC Sou...
+MONGODB | localhost:27017 | api_development.update | SUCCEEDED | 0.0006360000000000001s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"6fccc39c-80bc-4c81-83d9-2d5a848c8c09"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000446s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"6fccc39c-80bc-4c81-83d9-2d5a848c8c09", "name"=>"Raymond James Stadium", "city"=>"Tampa", "state"=>"FL", "country"=>"USA", "zip"=>"33607", "address"=>"4201 North Dale Mabry Highway", "capacity"=>65890, "surfa...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.00046s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"e6aa13a4-0055-48a9-bc41-be28dc106929", "name"=>"Falcons", "market"=>"Atlanta", "code"=>"ATL", "division_id"=>"nfc_south"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000532s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"1f2d393b-2291-4835-a412-0714966ea245"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00072s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"1f2d393b-2291-4835-a412-0714966ea245", "name"=>"Mercedes-Benz Stadium", "city"=>"Atlanta", "state"=>"GA", "country"=>"USA", "zip"=>"30313", "address"=>"441 Martin Luther King Jr Dr NW", "capacity"=>71000, "s...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000468s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"f14bf5cc-9a82-4a38-bc15-d39f75ed5314", "name"=>"Panthers", "market"=>"Carolina", "code"=>"CAR", "division_id"=>"nfc_south"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000408s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"39be9ed4-3292-49ac-8699-a381de3a4969"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00038100000000000005s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"39be9ed4-3292-49ac-8699-a381de3a4969", "name"=>"Bank of America Stadium", "city"=>"Charlotte", "state"=>"NC", "country"=>"USA", "zip"=>"28202", "address"=>"800 South Mint Street", "capacity"=>73778, "surface...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.00032900000000000003s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"0d855753-ea21-4953-89f9-0e20aff9eb73", "name"=>"Saints", "market"=>"New Orleans", "code"=>"NO", "division_id"=>"nfc_south"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.00034100000000000005s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"3c85d89a-ec66-4983-acd5-1381d6c8673a"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00039400000000000004s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"3c85d89a-ec66-4983-acd5-1381d6c8673a", "name"=>"Mercedes-Benz Superdome", "city"=>"New Orleans", "state"=>"LA", "country"=>"USA", "zip"=>"70112", "address"=>"1500 Sugar Bowl Drive", "capacity"=>76468, "surfa...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000456s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"f0e724b0-4cbf-495a-be47-013907608da9", "name"=>"49ers", "market"=>"San Francisco", "code"=>"SF", "division_id"=>"nfc_west"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.00041999999999999996s
+MONGODB | localhost:27017 | api_development.update | STARTED | {"update"=>"sports", "updates"=>[{"q"=>{"_id"=>"football", "categories._id"=>"us", "categories.0.leagues._id"=>"nfl", "categories.0.leagues.0.conferences._id"=>"nfc"}, "u"=>{"$push"=>{"categories.0.leagues.0.conferences.1.divisions"=>{"name"=>"NFC Wes...
+MONGODB | localhost:27017 | api_development.update | SUCCEEDED | 0.000543s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"24c71dbf-6469-46f1-8165-22005c295c8f"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000338s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"24c71dbf-6469-46f1-8165-22005c295c8f", "name"=>"Levi's Stadium", "city"=>"Santa Clara", "state"=>"CA", "country"=>"USA", "zip"=>"95054", "address"=>"4900 Marie P DeBartolo Way", "capacity"=>68500, "surface"=...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000341s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"de760528-1dc0-416a-a978-b510d20692ff", "name"=>"Cardinals", "market"=>"Arizona", "code"=>"ARI", "division_id"=>"nfc_west"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.00035800000000000003s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"f8e4d2ab-53f9-4e9f-8c4a-9bc278094a84"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00038700000000000003s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"f8e4d2ab-53f9-4e9f-8c4a-9bc278094a84", "name"=>"University of Phoenix Stadium", "city"=>"Glendale", "state"=>"AZ", "country"=>"USA", "zip"=>"85305", "address"=>"One Cardinals Drive", "capacity"=>63400, "surf...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000373s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"2eff2a03-54d4-46ba-890e-2bc3925548f3", "name"=>"Rams", "market"=>"Los Angeles", "code"=>"LA", "division_id"=>"nfc_west"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.00036500000000000004s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"4de1fcde-7c65-4145-a874-3753bdd584b7"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00038300000000000004s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"4de1fcde-7c65-4145-a874-3753bdd584b7", "name"=>"Los Angeles Memorial Coliseum", "city"=>"Los Angeles", "state"=>"CA", "country"=>"USA", "zip"=>"90037", "address"=>"3911 South Figueroa Street", "capacity"=>93...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000348s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"teams", "documents"=>[{"_id"=>"3d08af9e-c767-4f88-a7dc-b920c6d2b4a8", "name"=>"Seahawks", "market"=>"Seattle", "code"=>"SEA", "division_id"=>"nfc_west"}], "ordered"=>true}
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000355s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"_id"=>"c6b9e5df-c9e4-434c-b3e6-83928f11cbda"}, "projection"=>{"_id"=>1}, "limit"=>1}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00039799999999999997s
+MONGODB | localhost:27017 | api_development.insert | STARTED | {"insert"=>"venues", "documents"=>[{"_id"=>"c6b9e5df-c9e4-434c-b3e6-83928f11cbda", "name"=>"CenturyLink Field", "city"=>"Seattle", "state"=>"WA", "country"=>"USA", "zip"=>"98134", "address"=>"800 Occidental Avenue South", "capacity"=>67000, "surface"=...
+MONGODB | localhost:27017 | api_development.insert | SUCCEEDED | 0.000402s
+Started GET "/v1/sports" for 127.0.0.1 at 2018-01-05 22:18:03 -0600
+Processing by V1::SportsController#index as HTML
+Overwriting existing field _id in class Sport.
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"sports", "filter"=>{}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.001605s
+Overwriting existing field _id in class Category.
+Overwriting existing field _id in class League.
+Overwriting existing field _id in class Conference.
+Overwriting existing field _id in class Division.
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_east"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.005196s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"768c92aa-75ff-4a43-bcc0-f2798c2e1724"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0010270000000000001s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"4809ecb0-abd3-451d-9c4a-92a90b83ca06"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0021609999999999997s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"5fee86ae-74ab-4bdd-8416-42a9dd9964f3"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00089s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"97354895-8c77-4fd4-a860-32e62ea7382a"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.001307s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_north"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.002748s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"ad4ae08f-d808-42d5-a1e6-e9bc4e34d123"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000876s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"d5a2eb42-8065-4174-ab79-0a6fa820e35e"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0009910000000000001s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"ebd87119-b331-4469-9ea6-d51fe3ce2f1c"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.00099s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"cb2f9f1f-ac67-424e-9e72-1475cb0ed398"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0009029999999999999s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_south"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0006129999999999999s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"82cf9565-6eb9-4f01-bdbd-5aa0d472fcd9"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0024649999999999997s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"f7ddd7fa-0bae-4f90-bc8e-669e4d6cf2de"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.001033s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"82d2d380-3834-4938-835f-aec541e5ece7"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.006208s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"d26a1ca5-722d-4274-8f97-c92e49c96315"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0010420000000000002s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"afc_west"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000852s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"ce92bd47-93d5-4fe9-ada4-0fc681e6caa0"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.004030000000000001s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"1f6dcffb-9823-43cd-9ff4-e7a8466749b5"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.002552s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"6680d28d-d4d2-49f6-aace-5292d3ec02c2"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000669s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"1c1cec48-6352-4556-b789-35304c1a6ae1"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000902s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"nfc_east"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000706s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"e627eec7-bbae-4fa4-8e73-8e1d6bc5c060"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.001122s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"386bdbf9-9eea-4869-bb9a-274b0bc66e80"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.003124s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"04aa1c9d-66da-489d-b16a-1dee3f2eec4d"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000804s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"22052ff7-c065-42ee-bc8f-c4691c50e624"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0010479999999999999s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"nfc_north"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0035730000000000002s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"7b112545-38e6-483c-a55c-96cf6ee49cb8"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0008320000000000001s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"c5a59daa-53a7-4de0-851f-fb12be893e9e"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000762s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"a20471b4-a8d9-40c7-95ad-90cc30e46932"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0015350000000000001s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"33405046-04ee-4058-a950-d606f8c30852"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0034530000000000003s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"nfc_south"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000973s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"4254d319-1bc7-4f81-b4ab-b5e6f3402b69"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000794s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"e6aa13a4-0055-48a9-bc41-be28dc106929"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.002137s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"f14bf5cc-9a82-4a38-bc15-d39f75ed5314"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000737s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"0d855753-ea21-4953-89f9-0e20aff9eb73"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000834s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"teams", "filter"=>{"division_id"=>"nfc_west"}}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.001149s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"f0e724b0-4cbf-495a-be47-013907608da9"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0013009999999999999s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"de760528-1dc0-416a-a978-b510d20692ff"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.0008060000000000001s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"2eff2a03-54d4-46ba-890e-2bc3925548f3"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.002744s
+MONGODB | localhost:27017 | api_development.find | STARTED | {"find"=>"venues", "filter"=>{"team_id"=>"3d08af9e-c767-4f88-a7dc-b920c6d2b4a8"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | api_development.find | SUCCEEDED | 0.000796s
+Completed 200 OK in 586ms (Views: 0.6ms)
+
+

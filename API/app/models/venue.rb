@@ -12,14 +12,5 @@ class Venue
   field :roof_type, type: String
 
   belongs_to :team
-
-  # before_save :check_uniqueness
-
-  # protected
-  # def check_uniqueness()
-  #   if (Venue.exists?(id: self.id))
-  #     return false
-  #   end
-  #   return true
-  # end
+  validates :id, uniqueness: true
 end

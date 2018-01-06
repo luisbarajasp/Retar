@@ -23,7 +23,7 @@ hierarchy.conferences.each do |c|
                 code: "#{t.alias}",
                 division: division
             )
-            if(team.code != "NYG")
+            # if(team.code != "NYG")
                 Venue.create(
                     _id: "#{t.venue.id}",
                     name: "#{t.venue.name}",
@@ -37,7 +37,7 @@ hierarchy.conferences.each do |c|
                     roof_type: "#{t.venue.roof_type}",
                     team: team
                 )
-            end
+            # end
         end
     end
 end
