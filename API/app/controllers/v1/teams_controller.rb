@@ -6,7 +6,7 @@ class V1::TeamsController < ApplicationController
 
         @team = Team.find(params[:id])
 
-        render json: @team.to_json(:include => :venue), status: :ok
+        render json: @team.to_json, status: :ok
     end
 
     private

@@ -10,7 +10,18 @@ class Team
   has_many :home_games, class_name: 'Game', foreign_key: 'home_id'
   has_many :away_games, class_name: 'Game', foreign_key: 'away_id'
 
-  def games
-    
-  end
+  def serializable_hash(options={})
+    {
+      id: id,
+      code: code,
+      division_id: division_id,
+      market: market,
+      name: name,
+      games: {
+        home_games: home_games.inject([]) { |acc, m| acc << m.serializable_hash; acc },
+        away_games: away_games.inject([]) { |acc, m| acc << m.serializable_hash; acc },        
+      },
+      venue: venue.serializable_hash
+    }
+  end 
 end
