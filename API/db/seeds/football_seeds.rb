@@ -1,4 +1,4 @@
-require 'sportradar/nfl.rb'
+require 'sportradar/trial/nfl.rb'
 
 #
 # Sport: Football
@@ -9,7 +9,7 @@ Sport.create(name: "football", categories: [
     ])
 ])
 
-hierarchy = SportRadar::NFL.new.league_hierarchy()
+hierarchy = SportRadar::Trial::NFL.new.league_hierarchy()
 hierarchy.conferences.each do |c|
     conference = Conference.new(name: "#{c.name}", code: "#{c.alias.downcase}", league: nfl)
     c.divisions.each do |d|
@@ -23,7 +23,6 @@ hierarchy.conferences.each do |c|
                 code: "#{t.alias}",
                 division: division
             )
-            # if(team.code != "NYG")
                 Venue.create(
                     _id: "#{t.venue.id}",
                     name: "#{t.venue.name}",
@@ -37,7 +36,6 @@ hierarchy.conferences.each do |c|
                     roof_type: "#{t.venue.roof_type}",
                     team: team
                 )
-            # end
         end
     end
 end

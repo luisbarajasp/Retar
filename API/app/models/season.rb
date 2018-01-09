@@ -1,5 +1,6 @@
 class Season
   include Mongoid::Document
+  field :_id, type: String
   field :name, type: String
   field :type, type: String
   field :start_date, type: Date

@@ -4,6 +4,7 @@ class League
   field :name, type: String
   field :code, type: String
 
-  embeds_many :conferences
+  embeds_many :seasons
+  embeds_many :conferences  
   embedded_in :category
 end
