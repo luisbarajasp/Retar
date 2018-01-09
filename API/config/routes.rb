@@ -9,6 +9,8 @@ Rails.application.routes.draw do
         resources :leagues, path: '', except: [:index] do
           resources :teams, except: [:index] do
           end
+          resources :games, except: [:index] do
+          end
         end
       end
     end
