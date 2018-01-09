@@ -11,17 +11,15 @@ class Team
   has_many :away_games, class_name: 'Game', foreign_key: 'away_id'
 
   def serializable_hash(options={})
-    {
-      id: id,
-      code: code,
-      division_id: division_id,
-      market: market,
-      name: name,
-      games: {
-        home_games: home_games.inject([]) { |acc, m| acc << m.serializable_hash; acc },
-        away_games: away_games.inject([]) { |acc, m| acc << m.serializable_hash; acc },        
-      },
-      venue: venue.serializable_hash
+    options = { 
+      :include => :venue,
+      :except => [:home_id, :away_id]
+    }.update(options)
+    hash = super(options)
+    hash [:games] = {
+      home_games: home_games.inject([]) { |acc, m| acc << m.serializable_hash; acc },
+      away_games: away_games.inject([]) { |acc, m| acc << m.serializable_hash; acc }      
     }
-  end 
+    hash
+  end
 end

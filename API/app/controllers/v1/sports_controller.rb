@@ -3,7 +3,7 @@ require 'json'
 class V1::SportsController < ApplicationController
     def index
         @sports = Sport.all
-        con = Consumers::NFL.new.new_season("2017", "REG")
+        # con = Consumers::NFL.new.new_season("2017", "REG")
 
         render json: @sports.to_json(:include => { :teams => { :include => :venue }}), status: :ok
     end
