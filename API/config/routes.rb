@@ -11,6 +11,7 @@ Rails.application.routes.draw do
           end
           resources :games, except: [:index] do
           end
+          get "/:year/:name", to: "seasons#show", as: "season"
         end
       end
     end
