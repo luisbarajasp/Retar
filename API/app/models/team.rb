@@ -13,7 +13,7 @@ class Team
   def serializable_hash(options={})
     options = { 
       :include => :venue,
-      :except => [:home_id, :away_id]
+      :except => [:home_id, :away_id, :games]
     }.update(options)
     hash = super(options)
     hash [:games] = {

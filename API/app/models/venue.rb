@@ -11,6 +11,6 @@ class Venue
   field :surface, type: String
   field :roof_type, type: String
 
-  belongs_to :team
+  belongs_to :team, optional: true
   validates :id, uniqueness: true
 end

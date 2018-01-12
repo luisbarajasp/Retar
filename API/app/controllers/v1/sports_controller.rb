@@ -5,7 +5,8 @@ class V1::SportsController < ApplicationController
         @sports = Sport.all
         # con = Consumers::NFL.new.new_season("2017", "REG")
 
-        render json: @sports.to_json(:include => { :teams => { :include => :venue }}), status: :ok
+        # render json: @sports.to_json(:include => { :teams => { :include => :venue }}), status: :ok
+        render json: @sports.to_json, status: :ok        
     end
 
     def show
