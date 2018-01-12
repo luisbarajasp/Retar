@@ -20,26 +20,26 @@ class Game
 
   def serializable_hash(options={})
     options = { 
-      :include => :venue,
+      :include => [:venue, :home, :away],
       :except => [:home_id, :away_id]
     }.update(options)
     hash = super(options)
-    hash [:teams] = {
-      home: {
-        id: home.id,
-        code: home.code,
-        division_id: home.division_id,
-        market: home.market,
-        name: home.name,
-      },
-      away: {
-        id: away.id,
-        code: away.code,
-        division_id: away.division_id,
-        market: away.market,
-        name: away.name,
-      }       
-    }
+    # hash [:teams] = {
+    #   home: {
+    #     id: home.id,
+    #     code: home.code,
+    #     division_id: home.division_id,
+    #     market: home.market,
+    #     name: home.name,
+    #   },
+    #   away: {
+    #     id: away.id,
+    #     code: away.code,
+    #     division_id: away.division_id,
+    #     market: away.market,
+    #     name: away.name,
+    #   }       
+    # }
     hash
   end
 end
