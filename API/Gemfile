@@ -32,8 +32,6 @@ gem 'json', '~> 2.1'
 gem 'httpclient', '~> 2.8', '>= 2.8.3'
 # Devise gem for user authentication
 gem 'devise', '~> 4.4'
-# Token creation for passsing through header
-gem 'simple_token_authentication', '~> 1.15', '>= 1.15.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

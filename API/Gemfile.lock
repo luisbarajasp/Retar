@@ -116,10 +116,6 @@ GEM
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
     ruby_dep (1.5.0)
-    simple_token_authentication (1.15.1)
-      actionmailer (>= 3.2.6, < 6)
-      actionpack (>= 3.2.6, < 6)
-      devise (>= 3.2, < 6)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -154,7 +150,6 @@ DEPENDENCIES
   mongoid (~> 6.2, >= 6.2.1)
   puma (~> 3.7)
   rails (~> 5.1.4)
-  simple_token_authentication (~> 1.15, >= 1.15.1)
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data

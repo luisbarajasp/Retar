@@ -7,10 +7,6 @@ class User
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
-  # Simple Token Authentication
-  acts_as_token_authenticatable
-  field :authentication_token
-
   ## Database authenticatable
   field :username,           type: String, default: ""  
   field :email,              type: String, default: ""
@@ -44,6 +40,9 @@ class User
   ## Validations
   validates :username, presence: :true, uniqueness: { case_sensitive: false }
   validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
+
+  ## Relations
+  has_many :authentication_tokens, dependent: :destroy
 
   def self.find_by_login(login)
     where(:username => login).first || where(:email => login).first
