@@ -1,4 +1,4 @@
-class V1::GamesController < V1::RestrictablesController
+class Api::V1::GamesController < Api::V1::RestrictablesController
     def show
         @game = Game.find(params[:id])
 

@@ -1,4 +1,4 @@
-class V1::SessionsController < ApplicationController
+class Api::V1::SessionsController < ApplicationController
     def create
         login = params[:login].downcase
         user = User.find_by_login(login)

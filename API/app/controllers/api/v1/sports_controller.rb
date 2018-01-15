@@ -1,6 +1,6 @@
 require 'json'
 
-class V1::SportsController < V1::RestrictablesController
+class Api::V1::SportsController < Api::V1::RestrictablesController
     def index
         @sports = Sport.all
         # con = Consumers::NFL.new.new_season("2017", "REG")

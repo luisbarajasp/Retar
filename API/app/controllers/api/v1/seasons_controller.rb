@@ -1,4 +1,4 @@
-class V1::SeasonsController < V1::RestrictablesController
+class Api::V1::SeasonsController < Api::V1::RestrictablesController
     def show
         @sport = Sport.find(params[:sport_id])
         @category = @sport.categories.find(params[:category_id])

@@ -1,4 +1,4 @@
-class V1::RestrictablesController < ApplicationController
+class Api::V1::RestrictablesController < ApplicationController
     before_action :restrict_access
 
     private
