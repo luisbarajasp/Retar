@@ -11,7 +11,6 @@ class Api::V1::SportsController < Api::V1::RestrictablesController
 
     def show
         @sport = Sport.find(params[:id])
-
         render json: @sport.to_json(:include => { :teams => { :include => :venue }}), status: :ok
     end
 

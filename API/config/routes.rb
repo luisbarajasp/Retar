@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {}, skip: [:sessions, :registrations, :passwords]
-  namespace :api do
+  namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :sports
     end
   end
-  namespace :api do
+  namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :sessions, only: [:create, :destroy]
       resources :sports, path: '', only: [:show] do

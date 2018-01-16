@@ -8,7 +8,8 @@ class User
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   ## Database authenticatable
-  field :username,           type: String, default: ""  
+  field :_id,                type: String, default: ->{ username }
+  field :username,           type: String
   field :email,              type: String, default: ""
   field :encrypted_password, type: String, default: ""
 
@@ -43,6 +44,9 @@ class User
 
   ## Relations
   has_many :authentication_tokens, dependent: :destroy
+  has_many :done_retos, class_name: 'Reto', foreign_key: 'retador_id'
+  has_many :judging_retos, class_name: 'Reto', foreign_key: 'judge_id'
+  has_many :answered_retos, class_name: 'Retado', foreign_key: 'user_id'
 
   def self.find_by_login(login)
     where(:username => login).first || where(:email => login).first

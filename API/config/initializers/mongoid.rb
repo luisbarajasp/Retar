@@ -11,9 +11,9 @@
 # end
 
 # # converts object ids from BSON type object id to plain old string
-# module BSON
-#     class ObjectId
-#         alias :to_json :to_s
-#         alias :as_json :to_s
-#     end
-# end
+module BSON
+    class ObjectId
+        alias :to_json :to_s
+        alias :as_json :to_s
+    end
+end

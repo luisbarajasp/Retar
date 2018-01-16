@@ -18,10 +18,12 @@ class Game
   
   embeds_one :score
 
+  has_many :retos
+
   def serializable_hash(options={})
     options = { 
       :include => [:venue, :home, :away],
-      :except => [:home_id, :away_id]
+      :except => [:home_id, :away_id, :venue_id]
     }.update(options)
     hash = super(options)
     # hash [:teams] = {
