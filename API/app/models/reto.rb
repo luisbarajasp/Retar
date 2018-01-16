@@ -6,10 +6,11 @@ class Reto
   field :winner, type: String
   field :retador_pick, type: Integer # 0: home, 1: away
   field :maximum_to, type: Integer, default: ->{ 1 }
+  field :bet, type: Float
 
   belongs_to :retador, class_name: 'User', inverse_of: :done_retos
   belongs_to :judge, class_name: 'User', inverse_of: :judging_retos, optional: true
   belongs_to :game, optional: true
-  has_many :retados
+  has_many :retados, dependent: :destroy
 
 end

@@ -29,5 +29,15 @@ module API
     config.autoload_paths += %W(#{config.root}/app)
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    #to skip assets, scaffolds.css, test framework, helpers, view
+    config.generators do |g|
+      g.template_engine false #to skip views
+      g.test_framework  false #to skip test framework
+      g.assets  false
+      g.helper false
+      g.stylesheets false
+      g.skip_routes true
+    end
   end
 end

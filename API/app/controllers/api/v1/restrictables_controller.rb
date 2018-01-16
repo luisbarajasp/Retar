@@ -4,13 +4,13 @@ class Api::V1::RestrictablesController < ApiController
     private
     def restrict_access
         authenticate_or_request_with_http_token do |token, options|
-            @token = AuthenticationToken.where(token: token)
-            @token.exists?
+            @token = AuthenticationToken.where(token: token).first
+            !@token.blank?
         end
     end
-    # def current_user
-    #     @current_user = @token.as_json
-    # end
+    def current_user
+        @current_user = @token.user
+    end
 
-    # helper_method :current_user
+    helper_method :current_user
 end
