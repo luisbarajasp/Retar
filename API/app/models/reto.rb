@@ -7,6 +7,7 @@ class Reto
   field :retador_pick, type: Integer # 0: home, 1: away
   field :maximum_to, type: Integer, default: ->{ 1 }
   field :bet, type: Float
+  field :scheduled, type: DateTime
 
   belongs_to :retador, class_name: 'User', inverse_of: :done_retos
   belongs_to :judge, class_name: 'User', inverse_of: :judging_retos, optional: true

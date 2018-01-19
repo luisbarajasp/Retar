@@ -47,8 +47,22 @@ class User
   has_many :done_retos, class_name: 'Reto', foreign_key: 'retador_id'
   has_many :judging_retos, class_name: 'Reto', foreign_key: 'judge_id'
   has_many :answered_retos, class_name: 'Retado', foreign_key: 'user_id'
+  has_many :friendships, dependent: :destroy
+  has_many :inverse_friendships, class_name: "Friendship", foreign_key: "friend_id", dependent: :destroy
 
   def self.find_by_login(login)
     where(:username => login).first || where(:email => login).first
+  end
+  def all_friendships
+    all_friendships = []
+    all_friendships << friendships
+    all_friendships << inverse_friendships
+    all_friendships.flatten(1)
+  end
+  def friends
+    friends = []
+    friends << User.in(id: friendships.pluck(:friend_id))
+    friends << User.in(id: inverse_friendships.pluck(:user_id))
+    friends.flatten(1)
   end
 end
