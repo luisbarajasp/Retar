@@ -2,8 +2,8 @@ class AuthenticationToken
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  before_create :generate_token
-  field :_id, type: String, default: ->{ token }
+  before_validation :generate_token
+  # field :_id, type: String, default: ->{ token }
   field :token, type: String
 
   ## Validations

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :sessions, only: [:create, :destroy]
       resources :retos, except: [:edit, :new]
+      resources :friendships, except: [:edit, :new]      
       resources :sports, path: '', only: [:show] do
         resources :categories, path: '', except: [:index, :edit, :new] do
           resources :leagues, path: '', except: [:index, :edit, :new] do

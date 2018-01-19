@@ -1,4 +1,6 @@
 class Api::V1::SessionsController < ApplicationController
+    before_action :restrict_access, only: [:destroy]
+
     def create
         login = params[:login].downcase
         user = User.find_by_login(login)
@@ -11,5 +13,20 @@ class Api::V1::SessionsController < ApplicationController
     end
 
     def destroy
+        @current_user = @token.user
+        if @current_user.id == params[:id]
+            @token.delete
+            head(:no_content)
+        else
+            head(:unauthorized)
+        end
+    end
+
+    private
+    def restrict_access
+        authenticate_or_request_with_http_token do |token, options|
+            @token = AuthenticationToken.where(token: token).first
+            !@token.blank?
+        end
     end
 end

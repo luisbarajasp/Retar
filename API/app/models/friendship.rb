@@ -2,8 +2,7 @@ class Friendship
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  field :pending,  type: Boolean, default: ->{ true }
-  field :rejected, type: Boolean, default: ->{ false }
+  field :status,  type: Integer, default: ->{ 0 }
   field :reference, type: String
 
   belongs_to :user, inverse_of: :friendships
@@ -21,5 +20,6 @@ class Friendship
     a << self.friend_id
     
     self.reference = a.sort.join("")
+    #throw(:abort)
   end
 end

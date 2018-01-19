@@ -14,4 +14,6 @@ class Reto
   belongs_to :game, optional: true
   has_many :retados, dependent: :destroy
 
+  # TODO: validate that the users are friends
+
 end

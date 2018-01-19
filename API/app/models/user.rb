@@ -63,13 +63,14 @@ class User
       :small    => ['100x100#',   :jpg],
       :medium   => ['250x250',    :jpg],
       :large    => ['500x500>',   :jpg]
-    },
+    }
     # :convert_options => { :all => '-background white -flatten +matte' }
 
   def self.find_by_login(login)
     where(:username => login).first || where(:email => login).first
   end
-  
+
+  ## Friendships
   def all_friendships
     all_friendships = []
     all_friendships << friendships
@@ -78,8 +79,11 @@ class User
   end
   def friends
     friends = []
-    friends << User.in(id: friendships.pluck(:friend_id))
-    friends << User.in(id: inverse_friendships.pluck(:user_id))
+    friends << User.in(id: friendships.where(status: 1).pluck(:friend_id))
+    friends << User.in(id: inverse_friendships.where(status: 1).pluck(:user_id))
     friends.flatten(1)
+  end
+  def pending_friendships
+    friendships.where(status: 0)
   end
 end
