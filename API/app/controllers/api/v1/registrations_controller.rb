@@ -3,7 +3,7 @@ class Api::V1::RegistrationsController < Api::V1::RestrictablesController
 
     def create
         @set_username = false
-        if(params[:user][:fb_token] == nil)
+        if(params[:user][:fb_id] == nil)
             # Normal User
             @user = User.new(user_params)
 
@@ -15,8 +15,8 @@ class Api::V1::RegistrationsController < Api::V1::RestrictablesController
             end
         else
             # Facebook User
-            @user = User.where(fb_token: params[:user][:fb_token]).first
-
+            @user = User.where(fb_id: params[:user][:fb_id]).first
+            
             if @user.nil?
                 @user = User.new(user_params)
                 if @user.save(validate: false)
@@ -47,7 +47,7 @@ class Api::V1::RegistrationsController < Api::V1::RestrictablesController
     private
 
     def user_params
-        params.require(:user).permit(:username, :name, :email, :fb_token, :password, :password_confirmation)
+        params.require(:user).permit(:username, :name, :email, :fb_id, :password, :password_confirmation)
     end
     def permitted_params
         params.permit(:fb_avatar)

@@ -36,7 +36,7 @@ class User
   field :unconfirmed_email,    type: String # Only if using reconfirmable
 
   ## Omniauthable (custom)
-  field :fb_token, type: String
+  field :fb_id, type: String
 
   ## Lockable
   # field :failed_attempts, type: Integer, default: 0 # Only if lock strategy is :failed_attempts
