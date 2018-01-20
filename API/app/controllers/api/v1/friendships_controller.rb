@@ -11,7 +11,7 @@ class Api::V1::FriendshipsController < Api::V1::RestrictablesController
         if @friendship.save
             head(:created)
         else
-            head(:unprocesssable_entity)
+            head(:unprocessable_entity)
         end
     end
 

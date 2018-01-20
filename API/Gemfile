@@ -46,6 +46,8 @@ gem 'httpclient', '~> 2.8', '>= 2.8.3'
 gem 'devise', '~> 4.4'
 # Paperclip for files management
 gem 'mongoid-paperclip', '~> 0.0.11'
+# Koala, lightweight for calling Facebook SDK
+gem 'koala', '~> 3.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   end
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
+      resources :registrations, only: [:create, :update]      
       resources :sessions, only: [:create, :destroy]
       resources :retos, except: [:edit, :new]
       resources :friendships, except: [:edit, :new]      
