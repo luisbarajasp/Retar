@@ -5,6 +5,7 @@ class AuthenticationToken
   before_create :generate_token
   # field :_id, type: String, default: ->{ token }
   field :token, type: String
+  field :fb_token, type: String
 
   ## Validations
   # validates :token, uniqueness: true

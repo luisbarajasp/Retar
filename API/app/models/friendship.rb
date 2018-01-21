@@ -2,7 +2,7 @@ class Friendship
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  field :status,  type: Integer, default: ->{ 0 }
+  field :status,  type: Integer, default: ->{ 0 } # 0: pending, 1: accepted, 2: declined
   field :reference, type: String
 
   belongs_to :user, inverse_of: :friendships
