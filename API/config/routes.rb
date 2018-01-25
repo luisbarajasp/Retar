@@ -9,6 +9,11 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :registrations, only: [:create, :update]      
       resources :sessions, only: [:create, :destroy]
+
+      ## App Views
+      get "/appviews/mine", to: "app_views#mine", as: "mine"
+      ## /App Views
+
       resources :retos, except: [:edit, :new]
       resources :friendships, except: [:edit, :new]      
       resources :sports, path: '', only: [:show] do

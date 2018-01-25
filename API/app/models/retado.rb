@@ -6,6 +6,5 @@ class Retado
   field :status, type: Integer, default: ->{ 0 }
 
   belongs_to :reto
-
   belongs_to :user, inverse_of: :answered_retos
 end

@@ -96,4 +96,20 @@ class User
   def pending_friendships
     friendships.where(status: 0)
   end
+
+  ## Retos
+  def accepted_retos
+    retos = []
+    answered_retos.where(status: 1) do |a|
+      
+    end
+  end
+  def live_retos
+    # all_retos = []
+    # all_retos << done_retos.where(status: "inprogress").stock
+    # all_retos << answered_retos.where(status: "inprogress").stock
+    # all_retos.flatten(1)
+    # all_retos.sort_by { |x| puts x[:began_at] }
+    combined_sorted = (done_retos.where(status: "inprogress") + accepted_retos.where(status: "inprogress")).sort{|a,b| a.began_at <=> b.began_at }
+  end
 end
