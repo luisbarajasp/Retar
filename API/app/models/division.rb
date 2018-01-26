@@ -1,9 +1,6 @@
-class Division
-  include Mongoid::Document
-  field :_id, type: String, default: ->{ code }
-  field :name, type: String, default: 'Default'
-  field :code, type: String, default: 'def'
+class Division < ApplicationRecord
+  self.primary_key = :alias
 
-  has_many :teams
-  embedded_in :conference
+  belongs_to :conference, foreign_key: 'conference_alias'
+  has_many :teams, foreign_key: 'division_alias'
 end

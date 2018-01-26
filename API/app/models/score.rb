@@ -1,13 +1,10 @@
-class Score
-  include Mongoid::Document
-  field :home_points, type: Integer
-  field :away_points, type: Integer
-
-  embeds_many :periods
-  embedded_in :game
+class Score < ApplicationRecord
+  has_many :periods
+  belongs_to :game
 
   after_save :set_winner
 
+  private
   def set_winner
     if(self.game.status == 'finished' || self.game.status == 'completed' || self.game.status == 'closed')
       if(self.home_points > self.away_points)

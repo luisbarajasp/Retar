@@ -1,10 +1,13 @@
-class Retado
-  include Mongoid::Document
-  include Mongoid::Timestamps
-
-  # field :_id, type: String
-  field :status, type: Integer, default: ->{ 0 }
-
+class Retado < ApplicationRecord
   belongs_to :reto
-  belongs_to :user, inverse_of: :answered_retos
+  belongs_to :user, inverse_of: :answered_retos, foreign_key: 'user_username'
+
+  before_create :validate_friendship
+
+  private
+  def validate_friendship
+    unless reto.retador.is_friend_with? user
+      throw(:abort)
+    end
+  end
 end

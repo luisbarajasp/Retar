@@ -1,9 +1,6 @@
-class Category
-  include Mongoid::Document
-  field :_id, type: String, default: ->{ country_code }
-  field :name, type: String
-  field :country_code, type: String
+class Category < ApplicationRecord
+  self.primary_key = :country_code
 
-  embeds_many :leagues
-  embedded_in :sport
+  has_many :leagues, foreign_key: 'category_country_code'
+  belongs_to :sport, foreign_key: 'sport_name'
 end

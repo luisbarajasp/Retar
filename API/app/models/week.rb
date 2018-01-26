@@ -1,9 +1,6 @@
-class Week
-  include Mongoid::Document
-  field :_id, type: String
-  field :title, type: String
-  field :sequence, type: Integer
+class Week < ApplicationRecord
+  self.primary_key = "id"
 
-  embedded_in :season
   has_many :games
+  belongs_to :season
 end

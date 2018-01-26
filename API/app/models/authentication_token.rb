@@ -1,17 +1,12 @@
-class AuthenticationToken
-  include Mongoid::Document
-  include Mongoid::Timestamps
-
+class AuthenticationToken < ApplicationRecord
   before_create :generate_token
-  # field :_id, type: String, default: ->{ token }
-  field :token, type: String
-  field :fb_token, type: String
 
-  ## Validations
-  # validates :token, uniqueness: true
+  attribute :token
+  attr_encrypted :token, key: ENV['TOKEN_ENCRYPTION_KEY']
+  blind_index :token, key: ENV["TOKEN_BLIND_INDEX_KEY"]
 
   ## Relations
-  belongs_to :user
+  belongs_to :user, foreign_key: 'user_username'
 
   private 
   def generate_token
@@ -19,5 +14,4 @@ class AuthenticationToken
       self.token = SecureRandom.hex
     end while self.class.where(token: token).exists?
   end
-
 end

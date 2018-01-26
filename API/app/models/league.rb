@@ -1,10 +1,7 @@
-class League
-  include Mongoid::Document
-  field :_id, type: String, default: ->{ code }
-  field :name, type: String
-  field :code, type: String
+class League < ApplicationRecord
+  self.primary_key = :alias
 
-  embeds_many :seasons
-  embeds_many :conferences  
-  embedded_in :category
+  belongs_to :category, foreign_key: 'category_country_code'
+  has_many :conferences, foreign_key: 'league_alias'
+  has_many :seasons, foreign_key: 'league_alias'
 end

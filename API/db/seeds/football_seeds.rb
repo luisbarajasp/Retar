@@ -3,28 +3,26 @@ require 'sportradar/trial/nfl.rb'
 #
 # Sport: Football
 #
-Sport.create(name: "football", categories: [
-    Category.new(name: "United States", country_code: "us", leagues:[
-        nfl = League.new(name: "National Football League", code: "nfl")
-    ])
-])
+s = Sport.create(name: "football")
+c = Category.new(name: "United States", country_code: "us", sport: s)
+nfl = League.new(name: "National Football League", alias: "nfl", category: c)
 
 hierarchy = SportRadar::Trial::NFL.new.league_hierarchy()
 hierarchy.conferences.each do |c|
-    conference = Conference.new(name: "#{c.name}", code: "#{c.alias.downcase}", league: nfl)
+    conference = Conference.new(name: "#{c.name}", alias: "#{c.alias.downcase}", league: nfl)
     c.divisions.each do |d|
-        division = Division.new(name: "#{d.name}", code: "#{d.alias.downcase}", conference: conference)
+        division = Division.new(name: "#{d.name}", alias: "#{d.alias.downcase}", conference: conference)
         d.teams.each do |t|
             # Teams and Venues (because they do not embed in division only belong)
             team = Team.create(
-                _id: "#{t.id}", 
+                id: "#{t.id}", 
                 name: "#{t.name}", 
                 market: "#{t.market}", 
-                code: "#{t.alias}",
+                alias: "#{t.alias}",
                 division: division
             )
                 Venue.create(
-                    _id: "#{t.venue.id}",
+                    id: "#{t.venue.id}",
                     name: "#{t.venue.name}",
                     city: "#{t.venue.city}",
                     state: "#{t.venue.state}",

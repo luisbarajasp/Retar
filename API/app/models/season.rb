@@ -1,12 +1,8 @@
-class Season
-  include Mongoid::Document
-  field :_id, type: String
-  field :name, type: String
-  field :type, type: String
-  field :start_date, type: Date
-  field :end_date, type: Date
-  field :year, type: String
+class Season < ApplicationRecord
+  self.primary_key = "id"
+  # disable STI
+  self.inheritance_column = :_type_disabled
 
-  embeds_many :weeks
-  embedded_in :league
+  belongs_to :league
+  has_many :weeks
 end

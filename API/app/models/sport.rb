@@ -1,7 +1,5 @@
-class Sport
-  include Mongoid::Document
-  field :_id, type: String, default: ->{ name }
-  field :name, type: String
+class Sport < ApplicationRecord
+  self.primary_key = :name
 
-  embeds_many :categories
+  has_many :categories, foreign_key: 'sport_name'
 end

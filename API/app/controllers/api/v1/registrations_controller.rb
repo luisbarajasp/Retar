@@ -9,7 +9,7 @@ class Api::V1::RegistrationsController < Api::V1::RestrictablesController
             @user = User.new(user_params)
 
             if @user.save
-                authentication_token = @user.authentication_tokens.create!
+                @authentication_token = @user.authentication_tokens.create!
                 render :create, status: :created
             else
                 head(:unprocessable_entity)

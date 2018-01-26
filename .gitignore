@@ -23,3 +23,6 @@
 
 # Ignore paperclip images
 /API/avatars
+
+# Ignore secrets (figaro)
+API/config/application.yml
