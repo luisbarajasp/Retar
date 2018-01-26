@@ -6,12 +6,6 @@ class User < ActiveRecord::Base
 
   self.primary_key = :username
 
-  ## Lockable
-  # field :failed_attempts, type: Integer, default: 0 # Only if lock strategy is :failed_attempts
-  # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
-  # field :locked_at,       type: Time
-
-
   ## Paperclip
   has_attached_file :avatar, styles: { large: "500x500>", medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
 
@@ -24,7 +18,7 @@ class User < ActiveRecord::Base
   has_many :authentication_tokens, dependent: :destroy, foreign_key: 'user_username'
   has_many :done_retos, class_name: 'Reto', foreign_key: 'retador_username'
   has_many :judging_retos, class_name: 'Reto', foreign_key: 'judge_username'
-  has_many :answered_retos, class_name: 'Retado', foreign_key: 'user_username'
+  has_many :being_retados, class_name: 'Retado', foreign_key: 'user_username'
   has_many :friendships, dependent: :destroy, foreign_key: 'user_username'
   has_many :inverse_friendships, class_name: "Friendship", foreign_key: "friend_username", dependent: :destroy
   
@@ -57,18 +51,14 @@ class User < ActiveRecord::Base
   end
 
   ## Retos
+  # def accepted_retados
+  #   being_retado.where(status: 1)
+  # end
   def accepted_retos
-    retos = []
-    answered_retos.where(status: 1) do |a|
-      
-    end
+    Reto.joins(:retados).where('retados.status = ? AND retados.user_username = ?', 1, self.username).to_a
+    # Reto.joins(being_retados)
   end
   def live_retos
-    # all_retos = []
-    # all_retos << done_retos.where(status: "inprogress").stock
-    # all_retos << answered_retos.where(status: "inprogress").stock
-    # all_retos.flatten(1)
-    # all_retos.sort_by { |x| puts x[:began_at] }
     combined_sorted = (done_retos.where(status: "inprogress") + accepted_retos.where(status: "inprogress")).sort{|a,b| a.began_at <=> b.began_at }
   end
 

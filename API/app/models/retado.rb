@@ -1,6 +1,6 @@
 class Retado < ApplicationRecord
   belongs_to :reto
-  belongs_to :user, inverse_of: :answered_retos, foreign_key: 'user_username'
+  belongs_to :user, inverse_of: :being_retados, foreign_key: 'user_username'
 
   before_create :validate_friendship
 
