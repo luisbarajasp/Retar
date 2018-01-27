@@ -4,13 +4,17 @@ class Reto < ApplicationRecord
   belongs_to :game, optional: true
   has_many :retados, dependent: :destroy
 
-  before_save :set_began_date
+  before_save :set_dates
   # after_save :check_response
 
   private
-  def set_began_date
-    if self.status_changed? && self.status == "inprogress"
-      self.began_at = Time.now
+  def set_dates
+    if self.status_changed? 
+      if self.status == "inprogress"
+        self.began_at = Time.now
+      elsif self.status == "finished"
+        self.finished_at = Time.now
+      end
     end
   end
   # def check_response

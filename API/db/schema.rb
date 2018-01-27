@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180126035858) do
+ActiveRecord::Schema.define(version: 20180126233438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -114,11 +114,11 @@ ActiveRecord::Schema.define(version: 20180126035858) do
 
   create_table "retos", force: :cascade do |t|
     t.text "description"
-    t.integer "winner"
-    t.integer "retador_pick"
+    t.string "winner"
+    t.string "retador_pick"
     t.integer "maximum_to", default: 1
     t.decimal "bet"
-    t.datetime "scheduled"
+    t.datetime "scheduled_at"
     t.integer "duration"
     t.datetime "began_at"
     t.string "status", default: "scheduled"
@@ -127,6 +127,7 @@ ActiveRecord::Schema.define(version: 20180126035858) do
     t.string "game_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "finished_at"
   end
 
   create_table "scores", force: :cascade do |t|

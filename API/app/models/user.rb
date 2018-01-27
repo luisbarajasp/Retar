@@ -51,15 +51,21 @@ class User < ActiveRecord::Base
   end
 
   ## Retos
-  # def accepted_retados
-  #   being_retado.where(status: 1)
-  # end
+  def unanswered_retos
+    Reto.joins(:retados).where('retados.status = ? AND retados.user_username = ?', 0, self.username)
+  end
   def accepted_retos
-    Reto.joins(:retados).where('retados.status = ? AND retados.user_username = ?', 1, self.username).to_a
+    Reto.joins(:retados).where('retados.status = ? AND retados.user_username = ?', 1, self.username)
     # Reto.joins(being_retados)
   end
   def live_retos
-    combined_sorted = (done_retos.where(status: "inprogress") + accepted_retos.where(status: "inprogress")).sort{|a,b| a.began_at <=> b.began_at }
+    (done_retos.where(status: "inprogress") + accepted_retos.where(status: "inprogress")).sort{|a,b| a.began_at <=> b.began_at }
+  end
+  def upcoming_retos
+    (done_retos.where(status: "scheduled") + accepted_retos.where(status: "scheduled")).sort{|a,b| a.scheduled_at <=> b.scheduled_at }
+  end
+  def finished_retos
+    (done_retos.where(status: "finished") + accepted_retos.where(status: "finished")).sort{|a,b| a.finished_at <=> b.finished_at }
   end
 
 end
