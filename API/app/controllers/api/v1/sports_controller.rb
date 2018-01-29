@@ -5,7 +5,7 @@ class Api::V1::SportsController < ApiController
         @sports = Sport.all
 
         # TODO: instead of calling from here call from active job
-        con = Consumers::NFL.new.new_season("2017", "REG")
+        # con = Consumers::NFL.new.new_season("2017", "REG")
         
         # render json: @sports.to_json(:include => { :teams => { :include => :venue }}), status: :ok
         render json: @sports.to_json, status: :ok

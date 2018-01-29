@@ -1,5 +1,5 @@
 class AuthenticationToken < ApplicationRecord
-  before_create :generate_token
+  before_validation :generate_token
 
   attribute :token
   attr_encrypted :token, key: ENV['TOKEN_ENCRYPTION_KEY']

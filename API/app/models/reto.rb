@@ -9,7 +9,7 @@ class Reto < ApplicationRecord
 
   private
   def set_dates
-    if self.status_changed? 
+    if self.saved_change_to_status? 
       if self.status == "inprogress"
         self.began_at = Time.now
       elsif self.status == "finished"

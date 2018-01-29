@@ -58,6 +58,7 @@ class User < ActiveRecord::Base
     Reto.joins(:retados).where('retados.status = ? AND retados.user_username = ?', 1, self.username)
     # Reto.joins(being_retados)
   end
+  # Mine View
   def live_retos
     (done_retos.where(status: "inprogress") + accepted_retos.where(status: "inprogress")).sort{|a,b| a.began_at <=> b.began_at }
   end

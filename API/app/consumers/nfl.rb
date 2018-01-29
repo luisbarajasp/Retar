@@ -30,7 +30,7 @@ module Consumers
                             roof_type: "#{g.venue.roof_type}"
                         )
                     end
-                    game = Game.create(id: "#{g.id}", status: "#{g.status}", number: g.number, scheduled: g.scheduled.to_time, attendance: g.attendance, weather: "#{g.weather}", venue_id: "#{g.venue.id}", home_id: "#{g.home.id}", away_id: "#{g.away.id}", week: week)
+                    game = Game.new(id: "#{g.id}", status: "#{g.status}", number: g.number, scheduled: g.scheduled.to_time, attendance: g.attendance, weather: "#{g.weather}", venue_id: "#{g.venue.id}", home_id: "#{g.home.id}", away_id: "#{g.away.id}", week: week)
                     # TODO: Score se supone que aun no tiene porque todavia no empiezan los juegos
                     if(g.respond_to?(:scoring))
                         score = Score.create(home_points: g.scoring.home_points, away_points: g.scoring.away_points, game: game)
@@ -38,6 +38,7 @@ module Consumers
                             Period.create(id: "#{p.id}", type: "#{p.period_type}", home_points: p.home_points, away_points: p.away_points, number: p.number, score: score)
                         end
                     end
+                    game.save
                 end
             end
         end
